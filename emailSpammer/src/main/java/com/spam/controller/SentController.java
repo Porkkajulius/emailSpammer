@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spam.bean.User;
 import com.spam.util.SendMail;
@@ -26,20 +26,24 @@ public class SentController {
 		@RequestMapping(value = "/sent/new", method = RequestMethod.GET)
 		public String sentEmail(Model model) throws IOException {
 			User user = new User();
+			
 			model.addAttribute("user", user);
+			
 			return "sentEmail";
 		}
 
 		// Sender
 		@RequestMapping(value = "/sent/new", method = RequestMethod.POST)
-		public String getEmail(@ModelAttribute(value = "email") User user) {
+		public String getEmail(@RequestParam("count") int count,@RequestParam("sub") String sub,@RequestParam("bod") String bod, @ModelAttribute User user) {
 		
-
+			
+			
+			System.out.println(count);
 			  String to = user.getEmail();
-		      String subject = "spammer subject";
-		      String body = "message text";
+		      String subject = (sub);
+		      String body = (bod);
 		      
-		      for(int i=0; i<10;i++){
+		      for(int i=0; i<count;i++){
 		    	  
 			      sposti.sendMail(to, subject, body);
 		    	  
