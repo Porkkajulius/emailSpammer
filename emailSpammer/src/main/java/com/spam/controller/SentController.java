@@ -36,11 +36,17 @@ public class SentController {
 		
 
 			  String to = user.getEmail();
-		      String subject = "subject";
-		      String body = "body";
+		      String subject = "spammer subject";
+		      String body = "message text";
+		      
+		      for(int i=0; i<10;i++){
+		    	  
+			      sposti.sendMail(to, subject, body);
+		    	  
+		      }
 
-		      sposti.sendMail(to, subject, body);
-			return "redirect:/sentEmail";
+		  
+			return "redirect:/sent/new";
 		}
 	
 
