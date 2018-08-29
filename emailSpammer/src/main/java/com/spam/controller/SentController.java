@@ -67,13 +67,13 @@ public class SentController {
 			String subject = (sub);
 			String body = (bod);
 		      
-		     // count contains requested email count
-		     for(int i=0; i<count;i++){
+			// count contains requested email count
+			for(int i=0; i<count;i++){
+				
+				// uses sendMail method from sposti util for sending email messages
+				sposti.sendMail(to, subject, body);
 		    	  
-		    	 	// uses sendMail method from sposti util for sending email messages
-		    	 	sposti.sendMail(to, subject, body);
-		    	  
-		      }
+			}
 
 			return "redirect:/sent/new";
 		}
