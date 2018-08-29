@@ -1,12 +1,16 @@
 package com.spam.bean;
 
+/*
+ * This is example class which could contain user information
+ * Not necessary to use, but created ready for future needs
+ */
+
 public class User {
 	
 	 private String email;
 
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public User(String email) {

@@ -6,51 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href="../css/global.css"  type="text/css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/global.css"  type="text/css" >
+    
     <title>Mailsender</title>
   </head>
-  <body>
   
-<div class="container-fluid bg">
-<div class="row">
-  <div class="col-md-4 col-sm-4 col-xs-12"></div>
-   <div class="col-md-4 col-sm-5 col-xs-12">
-  <form class="form-container" name="spam" action="new" method="POST">
-  <h1>Emailsender</h1>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" name="email" placeholder="Receiver email adress">
-  </div>
-  
-   <div class="form-group">
-    <label for="exampleInputEmail1">Mail subject</label>
-    <input class="form-control" name="sub" placeholder="Subject">
-  </div>
-  
-   <div class="form-group">
-    <label for="exampleInputEmail1">Mail body</label>
-    <input class="form-control" name="bod" placeholder="Body text">
-  </div>
-  
-   <div class="form-group">
-    <label for="exampleInputEmail1">Mail count</label>
-   <input class="form-control" name="count" placeholder="How many will you sent?">
-  </div>
-
-	<button input type="submit" class="btn btn-success btn-block">Submit</button>
-
-</form>
-  </div>
-</div>
-</div>
+ <body>
+ <div class="container-fluid bg">
+  <div class="row">
+   <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    <div class="col-md-4 col-sm-5 col-xs-12">
+     <form class="form-container" name="spam" action="new" method="POST">
     
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+       <h1>Emailsender</h1>
+      
+      <!-- Required form fields for sending an email -->
+      
+      <!-- Email address -->
+       <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" name="email" placeholder="Receiver email adress">
+       </div>
+  
+  	   <!-- Subject for email -->
+       <div class="form-group">
+        <label for="exampleInputEmail1">Mail subject</label>
+        <input class="form-control" name="sub" placeholder="Subject">
+       </div>
+       
+       <!-- Body text = the context of email -->
+	   <div class="form-group">
+	    <label for="exampleInputEmail1">Mail body</label>
+	    <input class="form-control" name="bod" placeholder="Body text">
+	   </div>
+  
+  	   <!-- Count of emails -->
+	   <div class="form-group">
+	    <label for="exampleInputEmail1">Mail count</label>
+	    <input class="form-control" name="count" placeholder="How many will you sent?">
+	   </div>
+
+	   <button input type="submit" class="btn btn-success btn-block">Submit</button>
+	   
+     </form> 
+    </div>
+   </div>
+  </div>
+    
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ </body>
 </html>
