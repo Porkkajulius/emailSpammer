@@ -58,20 +58,20 @@ public class SentController {
 
 		// Sender, parameters from form will be returned here
 		@RequestMapping(value = "/sent/new", method = RequestMethod.POST)
-		public String getEmail(@RequestParam("count") int count,@RequestParam("sub") String sub,@RequestParam("bod") String bod, @ModelAttribute User user) throws FileNotFoundException, DocumentException {		  
+		public String getEmail(@RequestParam("count") int count,@RequestParam("sub") String sub,@RequestParam("bod") String bod, @ModelAttribute User user) throws DocumentException {		  
 			
 			System.out.println(count);
 			
 			// Email parameters will be inserted to variables
 			String to = user.getEmail();
-		    String subject = (sub);
-		    String body = (bod);
+			String subject = (sub);
+			String body = (bod);
 		      
 		     // count contains requested email count
 		     for(int i=0; i<count;i++){
 		    	  
-		    	 	  // uses sendMail method from sposti util for sending email messages
-			      sposti.sendMail(to, subject, body);
+		    	 	// uses sendMail method from sposti util for sending email messages
+		    	 	sposti.sendMail(to, subject, body);
 		    	  
 		      }
 
